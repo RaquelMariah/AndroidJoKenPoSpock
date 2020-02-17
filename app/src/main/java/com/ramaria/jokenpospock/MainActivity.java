@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void selecionadoPedra(View v){
         this.opcaoSelecionada("pedra");
+
     }
 
     public void selecionadoPapel(View v){
@@ -40,7 +41,22 @@ public class MainActivity extends AppCompatActivity {
     public void opcaoSelecionada(String opcaoUsuario) {
 
         ImageView imagemResutado = findViewById(R.id.imagemResultado);
+        ImageView imagemResultado2 = findViewById(R.id.imagemResultado2);
         TextView resultado = findViewById(R.id.escolhaResultado);
+
+        if (opcaoUsuario == "pedra"){
+            imagemResultado2.setImageResource(R.drawable.pedra);
+        }else if (opcaoUsuario == "tesoura"){
+            imagemResultado2.setImageResource(R.drawable.tesoura);
+        }else if (opcaoUsuario == "papel"){
+            imagemResultado2.setImageResource(R.drawable.papel);
+        }else if (opcaoUsuario == "lagarto"){
+            imagemResultado2.setImageResource(R.drawable.lagarto);
+        }else {
+            imagemResultado2.setImageResource(R.drawable.spock);
+        }
+        //
+
 
         int numero = new Random().nextInt(5);
         String[] opcoes = {"pedra", "papel", "tesoura", "lagarto", "spock"};
@@ -52,15 +68,19 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "papel":
                 imagemResutado.setImageResource(R.drawable.papel);
+                //imagemResultado2.setImageResource(numero);
                 break;
             case "tesoura":
                 imagemResutado.setImageResource(R.drawable.tesoura);
+                //imagemResultado2.setImageResource(numero);
                 break;
             case "lagarto":
                 imagemResutado.setImageResource(R.drawable.lagarto);
+               // imagemResultado2.setImageResource(numero);
                 break;
             case "spock":
                 imagemResutado.setImageResource(R.drawable.spock);
+                //imagemResultado2.setImageResource(numero);
             default:
                 break;
         }
