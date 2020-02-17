@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void selecionaadoPedra(View v){
+    public void selecionadoPedra(View v){
         this.opcaoSelecionada("pedra");
     }
 
