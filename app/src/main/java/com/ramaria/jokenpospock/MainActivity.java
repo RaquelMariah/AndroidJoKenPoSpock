@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         ImageView imagemResultado2 = findViewById(R.id.imagemResultado2);
         TextView resultado = findViewById(R.id.escolhaResultado);
 
+
+        //mostrando a escolha do usuário
+        //pode-se substituir por switch case
         if (opcaoUsuario == "pedra"){
             imagemResultado2.setImageResource(R.drawable.pedra);
         }else if (opcaoUsuario == "tesoura"){
